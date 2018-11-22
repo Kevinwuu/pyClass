@@ -5,7 +5,7 @@ class EmployeeClass():
         self.Etype = Etype
 
     def __str__(self):
-        return(f'員工姓名:{self.name}\nID:{self.ids}\nType:{self.Etype}')
+        return(f'員工姓名:{self.name}\nID:{self.ids}\nType:{self.Etype}\n')
 
 
 class WorkerClass(EmployeeClass):
@@ -15,7 +15,7 @@ class WorkerClass(EmployeeClass):
         self.rate = rate
 
     def __str__(self):
-        return(f'普通員工姓名:{self.name}\nID:{self.ids}\nType:{self.Etype}\n排班:{self.shift}\n時薪:{self.rate}')
+        return(f'普通員工姓名:{self.name}\nID:{self.ids}\nType:{self.Etype}\n排班:{self.shift}\n時薪:{self.rate}\n')
 
 
 class SupervisorClass(EmployeeClass):
@@ -25,4 +25,4 @@ class SupervisorClass(EmployeeClass):
         self.bonus = bonus
 
     def __str__(self):
-        return(f'領班員工姓名:{self.name}\nID:{self.ids}\nType:{self.Etype}\n薪資:{self.salary}\n獎金:{self.bonus}')
+        return(f'領班員工姓名:{self.name}\nID:{self.ids}\nType:{self.Etype}\n薪資:{self.salary}\n獎金:{self.bonus}\n')
