@@ -5,9 +5,7 @@ class EmployeeClass():
         self.Etype = Etype
 
     def __str__(self):
-        return('員工姓名:'+self.name +
-               "\nID:"+self.ids +
-               "\nType:"+self.Etype)
+        return(f'員工姓名:{self.name}\nID:{self.ids}\nType:{self.Etype}')
 
 
 class WorkerClass(EmployeeClass):

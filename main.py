@@ -1,6 +1,4 @@
-from EmployeeClass import EmployeeClass
-from EmployeeClass import WorkerClass
-from EmployeeClass import SupervisorClass
+from EmployeeClass import *
 
 # 以員工ID當作key
 employee = dict()
