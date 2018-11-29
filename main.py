@@ -36,6 +36,9 @@ while choice != "0":
     elif choice == '4':
         temp_id = input("Want to modify ID: ")
         ChangeEmployee(temp_id).mod(employee_dict)
+    else:
+        temp_id = input("Want to del ID: ")
+        DelEmployee(temp_id).delete(employee_dict)
 
     for i in command_dict:
         print(f'{i}. {command_dict[i]}')

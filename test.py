@@ -1,12 +1,10 @@
-def pr():
-    print('wayne')
-
-def ou():
-    print('no')
-
-cmd = {
-    "1":pr(),
-    "2":ou()
+a = {
+    'Name': "Wayne",
+    'School': 'TKU'
 }
 
-cmd["1"]
+del(a['Name'])
+
+for i in a:
+    print(i)
+    print(a[i])
