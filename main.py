@@ -1,36 +1,42 @@
+from AddEmployee import *
+from ChangeEmployee import *
+from DelEmployee import *
+from EmployDbHandler import *
 from EmployeeClass import *
-
-# 以員工ID當作key
-employee = dict()
-
-control = input("1. Add a new employee" +
-                "\n2. List all" +
-                "\n0. Quit the program" +
-                "\nEnter your choice:")
+from ListAllEmployee import *
+from LookUpEmployee import *
 
 
-while int(control):
-    if control == '1':  # add new employee
-        e_ID = input("Plz enter the employee ID: ")
-        e_name = input("Plz enter the employee name: ")
-        e_type = input("1. Worker 2.Supervisor: ")
-        if e_type == '1':  # type == worker
-            e_shift = input("1.day 2.night: ")
-            e_rate = input("Rate: ")
-            employee[e_ID] = WorkerClass(e_name, e_ID, e_type, e_shift, e_rate) #worker物件
-        else:
-            e_salary = input("Salary: ")
-            e_bonus = input("Bonus: ")
-            employee[e_ID] = SupervisorClass(
-                e_name, e_ID, e_type, e_salary, e_bonus)
+# var
+choice = ""
+employee_dict = dict()
+command_dict = {
+    "0": "Quit the program",
+    "1": "Add a new employee",
+    "2": "List all",
+    "3": "Look up a employee",
+    "4": "Change a existing employee",
+    "5": "Deltet the Employee"
+}
 
-        print("The entry has been added")
 
-    if control == '2':
-        for i in employee:
-            print(employee[i]) #call _str_
+# 選單
+for i in command_dict:
+    print(f'{i}. {command_dict[i]}')
+choice = input('Plz input your choice')
 
-    control = input("1. Add a new employee" +
-                    "\n2. List all" +
-                    "\n0. Quit the program" +
-                    "\n Enter your choice:")
+while choice != "0":
+    if choice == "1":
+        AddEmployee().register(employee_dict)
+    elif choice == "2":
+        ListAllEmployee().ls(employee_dict)
+    elif choice == '3':
+        temp_id = input("Looking up ID: ")
+        LookUpEmployee(temp_id).find(employee_dict)
+    elif choice == '4':
+        temp_id = input("Want to modify ID: ")
+        ChangeEmployee(temp_id).mod(employee_dict)
+
+    for i in command_dict:
+        print(f'{i}. {command_dict[i]}')
+    choice = input('Plz input your choice')
