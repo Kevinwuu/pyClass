@@ -6,10 +6,12 @@ from EmployeeClass import *
 from ListAllEmployee import *
 from LookUpEmployee import *
 
+# DB init
+db_handler = EmployDbHandler()
+employee_dict = db_handler.check()
 
 # var
 choice = ""
-employee_dict = dict()
 command_dict = {
     "0": "Quit the program",
     "1": AddEmployee,
@@ -51,3 +53,5 @@ while choice != "0":
           "4. Change an existing employee\n" +
           "5. Delete a employee\n")
     choice = input('Plz input your choice: ')
+
+db_handler.quitapp(employee_dict)

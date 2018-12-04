@@ -1,14 +1,4 @@
-def pr(string):
-    print(string)
+import os
 
-
-def fu(string):
-    print(string)
-
-
-cmd_dict = {
-    1: pr,
-    2: fu
-}
-
-cmd_dict[1]("wayne")
+if os.path.exists("www.txt"):
+    print("yes")
