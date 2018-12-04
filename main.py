@@ -21,9 +21,13 @@ command_dict = {
 
 
 # 選單
-for i in command_dict:
-    print(f'{i}. {command_dict[i]}')
-choice = input('Plz input your choice')
+print("0. Quit the program\n" +
+      "1. Add a new employee\n" +
+      "2. List all\n" +
+      "3. Change an existing employee\n" +
+      "4. Delete the employee\n" +
+      "5. Quit the program\n")
+choice = input('Plz input your choice: ')
 
 while choice != "0":
     if choice == "1":
@@ -40,6 +44,10 @@ while choice != "0":
         temp_id = input("Want to del ID: ")
         command_dict["5"](temp_id).delete(employee_dict)
 
-    for i in command_dict:
-        print(f'{i}. {command_dict[i]}')
-    choice = input('Plz input your choice')
+    print("0. Quit the program\n" +
+          "1. Add a new employee\n" +
+          "2. List all\n" +
+          "3. Change an existing employee\n" +
+          "4. Delete the employee\n" +
+          "5. Quit the program\n")
+choice = input('Plz input your choice: ')
