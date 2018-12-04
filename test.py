@@ -1,4 +1,4 @@
-import os
+import pickle
 
-if os.path.exists("www.txt"):
-    print("yes")
+obj2 = pickle._load(open('EmployDb.dat', 'rb'))
+print(obj2)

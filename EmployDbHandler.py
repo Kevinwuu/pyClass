@@ -19,4 +19,4 @@ class EmployDbHandler():
         pass
 
     def quitapp(self, employee_dict):
-        pickle._dump(employee_dict, open('EmployDb.bat', 'wb'))
+        pickle._dump(employee_dict, open('EmployDb.dat', 'wb'))
