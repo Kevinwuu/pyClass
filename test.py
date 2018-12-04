@@ -1,10 +1,14 @@
-a = {
-    'Name': "Wayne",
-    'School': 'TKU'
+def pr(string):
+    print(string)
+
+
+def fu(string):
+    print(string)
+
+
+cmd_dict = {
+    1: pr,
+    2: fu
 }
 
-del(a['Name'])
-
-for i in a:
-    print(i)
-    print(a[i])
+cmd_dict[1]("wayne")
