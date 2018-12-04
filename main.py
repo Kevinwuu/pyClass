@@ -1,9 +1,9 @@
-from AddEmployee import AddEmployee.register
+from AddEmployee import *
 from ChangeEmployee import *
 from DelEmployee import *
 from EmployDbHandler import *
 from EmployeeClass import *
-from ListAllEmployee import ListAllEmployee.ls
+from ListAllEmployee import *
 from LookUpEmployee import *
 
 
@@ -12,8 +12,8 @@ choice = ""
 employee_dict = dict()
 command_dict = {
     "0": "Quit the program",
-    "1": register,
-    "2": ls,
+    "1": AddEmployee,
+    "2": ListAllEmployee,
     "3": LookUpEmployee,
     "4": ChangeEmployee,
     "5": DelEmployee
@@ -27,9 +27,9 @@ choice = input('Plz input your choice')
 
 while choice != "0":
     if choice == "1":
-        command_dict["1"](employee_dict)
+        command_dict["1"]().register(employee_dict)
     elif choice == "2":
-        command_dict["2"](employee_dict)
+        command_dict["2"]().ls(employee_dict)
     elif choice == '3':
         temp_id = input("Looking up ID: ")
         command_dict["3"](temp_id).find(employee_dict)
