@@ -24,9 +24,9 @@ command_dict = {
 print("0. Quit the program\n" +
       "1. Add a new employee\n" +
       "2. List all\n" +
-      "3. Change an existing employee\n" +
-      "4. Delete the employee\n" +
-      "5. Quit the program\n")
+      "3. Look up a employee\n" +
+      "4. Change an existing employee\n" +
+      "5. Delete a employee\n")
 choice = input('Plz input your choice: ')
 
 while choice != "0":
@@ -47,7 +47,7 @@ while choice != "0":
     print("0. Quit the program\n" +
           "1. Add a new employee\n" +
           "2. List all\n" +
-          "3. Change an existing employee\n" +
-          "4. Delete the employee\n" +
-          "5. Quit the program\n")
-choice = input('Plz input your choice: ')
+          "3. Look up a employee\n" +
+          "4. Change an existing employee\n" +
+          "5. Delete a employee\n")
+    choice = input('Plz input your choice: ')
